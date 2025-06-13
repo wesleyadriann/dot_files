@@ -3,7 +3,10 @@
 -- Add any additional keymaps here
 --#region
 
-vim.keymap.set("n", "<C-a>", "ggVGy", { desc = "Copiar todo o arquivo" })
+-- vim.keymap.set("n", "<C-a>", "ggVGy", { desc = "Copiar todo o arquivo" })
+vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Selecionar tudo" })
+vim.keymap.set("v", "<C-c>", '"+y', { desc = "Copiar para clipboard" })
+vim.keymap.set("n", "<C-S-a>", 'ggVG"+y', { desc = "Selecionar tudo e copiar para clipboard" })
 
 -- Normal mode
 vim.keymap.set("n", "<A-S-Down>", ":m .+1<CR>==", { desc = "Mover linha para baixo (Alt+Shift+Down)" })
