@@ -4,3 +4,15 @@
 --#region
 
 vim.keymap.set("n", "<C-a>", "ggVGy", { desc = "Copiar todo o arquivo" })
+
+-- Normal mode
+vim.keymap.set("n", "<A-S-Down>", ":m .+1<CR>==", { desc = "Mover linha para baixo (Alt+Shift+Down)" })
+vim.keymap.set("n", "<A-S-Up>", ":m .-2<CR>==", { desc = "Mover linha para cima (Alt+Shift+Up)" })
+
+-- Insert mode
+vim.keymap.set("i", "<A-S-Down>", "<Esc>:m .+1<CR>==gi", { desc = "Mover linha para baixo (Alt+Shift+Down)" })
+vim.keymap.set("i", "<A-S-Up>", "<Esc>:m .-2<CR>==gi", { desc = "Mover linha para cima (Alt+Shift+Up)" })
+
+-- Visual mode
+vim.keymap.set("v", "<A-S-Down>", ":m '>+1<CR>gv=gv", { desc = "Mover seleção para baixo (Alt+Shift+Down)" })
+vim.keymap.set("v", "<A-S-Up>", ":m '<-2<CR>gv=gv", { desc = "Mover seleção para cima (Alt+Shift+Up)" })

@@ -12,3 +12,4 @@ startup_mode = "Maximized"
 import = [
   "./tokyo-night-storm.toml"
 ]
+
