@@ -22,15 +22,10 @@ vim.keymap.set("v", "<A-S-Up>", ":m '<-2<CR>gv=gv", { desc = "Mover seleção pa
 
 vim.keymap.set("n", "<leader>t", "<C-w>h", { desc = "Toggle focus" })
 
--- Vai para o buffer 1 com Ctrl+1
-vim.keymap.set("n", "<C-1>", ":buffer 1<CR>", { desc = "Ir para o Buffer 1" })
--- Vai para o buffer 2 com Ctrl+2
-vim.keymap.set("n", "<C-2>", ":buffer 2<CR>", { desc = "Ir para o Buffer 2" })
--- Vai para o buffer 3 com Ctrl+3
-vim.keymap.set("n", "<C-3>", ":buffer 3<CR>", { desc = "Ir para o Buffer 3" })
-
-vim.keymap.set("n", "<C-S-p>", "<cmd>Telescope find_files<CR>", { desc = "Buscar arquivos (Ctrl+P)" })
+vim.keymap.set("n", "<C-p>", "<leader><space>", { desc = "Buscar arquivos (Ctrl+P)" })
 
 -- Control + i para abrir ações de código (correções rápidas)
 vim.keymap.set("n", "<C-.>", vim.lsp.buf.code_action, { desc = "LSP Code Action (Correção Rápida)" })
 vim.keymap.set("v", "<C-.>", vim.lsp.buf.code_action, { desc = "LSP Code Action (Correção Rápida)" })
+
+vim.keymap.set("n", "<S-Tab>", "<<", { desc = "Desindentar linha" })
