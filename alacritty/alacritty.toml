@@ -3,7 +3,7 @@ shell= "/Users/wesley.adriann/.cargo/bin/zellij"
 
 [font]
 normal.family = "MesloLGS Nerd Font Mono"
-size = 12.5
+size = 14 
 
 [window]
 startup_mode = "Maximized"

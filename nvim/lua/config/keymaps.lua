@@ -33,4 +33,5 @@ vim.keymap.set('n', '<C-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action 
 vim.keymap.set('v', '<C-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action (Correção Rápida)' })
 
 vim.keymap.set('n', '<S-Tab>', '<<', { desc = 'Desindentar linha' })
-vim.keymap.set('i', '<S-Tab>', '<<', { desc = 'Desindentar linha' })
+vim.keymap.set('n', '<Tab>', '>>', { desc = 'Indentar linha' })
+
