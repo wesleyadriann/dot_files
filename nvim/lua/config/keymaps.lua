@@ -28,10 +28,11 @@ vim.keymap.set('v', '<A-S-Up>', ":m '<-2<CR>gv=gv", { desc = 'Mover seleção pa
 
 vim.keymap.set('n', '<leader>h', '<C-w>h', { desc = 'Left window' })
 
--- Control + i para abrir ações de código (correções rápidas)
+-- Control + . para abrir ações de código (correções rápidas)
 vim.keymap.set('n', '<C-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action (Correção Rápida)' })
 vim.keymap.set('v', '<C-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action (Correção Rápida)' })
 
 vim.keymap.set('n', '<S-Tab>', '<<', { desc = 'Desindentar linha' })
 vim.keymap.set('n', '<Tab>', '>>', { desc = 'Indentar linha' })
 
+vim.keymap.set('n', '<leader>bn', '<cmd>enew<CR>', { desc = 'Novo buffer vazio' })
