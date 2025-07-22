@@ -7,8 +7,15 @@
 -- only for diagnostics. The rest of LSP support will still be
 -- provided by rust-analyzer.
 vim.g.lazyvim_rust_diagnostics = 'rust-analyzer'
+
 vim.opt.relativenumber = false -- Relative line numbers
+vim.opt.number = true -- Absolute line numbers
 -- vim.opt.colorcolumn = '80,120'
 
 vim.opt.spell = true
 vim.opt.spelllang = { 'pt_br', 'en' }
+
+vim.cmd [[
+  set conceallevel=0
+  set concealcursor=""
+]]
