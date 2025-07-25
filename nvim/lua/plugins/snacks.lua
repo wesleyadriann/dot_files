@@ -9,6 +9,21 @@ return {
         files = {
           hidden = true,
         },
+        explorer = {
+          -- auto_close = true,
+          -- hidden = true,
+          layout = {
+            -- finder = 'explorer',
+            layout = {
+              -- preset = 'sidebar',
+              -- position = 'right',
+            },
+          },
+        },
+      },
+      exclude = { -- adiciona nomes de pastas aqui pra excluir
+        -- '.git',
+        'node_modules',
       },
     },
   },
