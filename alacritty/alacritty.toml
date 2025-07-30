@@ -6,10 +6,12 @@ normal.family = "MesloLGS Nerd Font Mono"
 size = 14 
 
 [window]
-startup_mode = "Maximized"
+startup_mode = "Windowed"
 
 [general]
 import = [
-  "./tokyo-night-storm.toml"
+  # "./tokyo-night-storm.toml"
+  # "./catppuccin-macchiato.toml"
+  "./catppuccin-mocha.toml"
 ]
 

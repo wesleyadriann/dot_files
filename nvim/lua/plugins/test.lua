@@ -8,7 +8,7 @@ return {
       table.insert(
         opts.adapters,
         require 'neotest-jest' {
-          jestCommand = 'npm test --',
+          jestCommand = 'npm test -- --updateSnapshot --collectCoverage',
           jestConfigFile = 'jest.config.js',
           env = { CI = true },
           cwd = function()
