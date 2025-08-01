@@ -8,7 +8,10 @@ italic = { family = "CaskaydiaCove Nerd Font", style = "Italic" }
 size = 14 
 
 [window]
-startup_mode = "Windowed"
+padding.x = 8
+padding.y = 8
+# decorations = "None"
+startup_mode = "Windowed" # "Maximized"
 
 [general]
 import = [
@@ -17,3 +20,7 @@ import = [
   "./catppuccin-mocha.toml"
 ]
 
+[keyboard]
+bindings = [
+{ key = "F11", action = "ToggleFullscreen" }
+]
