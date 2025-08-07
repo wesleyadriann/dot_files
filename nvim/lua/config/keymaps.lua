@@ -26,11 +26,11 @@ vim.keymap.set('i', '<A-S-k>', '<Esc>:m .-2<CR>==gi', { desc = 'Mover linha para
 vim.keymap.set('v', '<A-S-Down>', ":m '>+1<CR>gv=gv", { desc = 'Mover seleção para baixo (Alt+Shift+Down)' })
 vim.keymap.set('v', '<A-S-Up>', ":m '<-2<CR>gv=gv", { desc = 'Mover seleção para cima (Alt+Shift+Up)' })
 
-vim.keymap.set('n', '<leader>h', '<C-w>h', { desc = 'Left window' })
+vim.keymap.set('n', '<leader>h', '<C-w>h', { desc = 'Janela a Esquerda' })
 
 -- Control + . para abrir ações de código (correções rápidas)
-vim.keymap.set('n', '<C-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action (Correção Rápida)' })
-vim.keymap.set('v', '<C-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action (Correção Rápida)' })
+vim.keymap.set('n', '<A-.>', vim.lsp.buf.codeeaction, { desc = 'LSP Code Action (Correção Rápida)' })
+vim.keymap.set('v', '<A-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action (Correção Rápida)' })
 
 vim.keymap.set('n', '<S-Tab>', '<<', { desc = 'Desindentar linha' })
 vim.keymap.set('n', '<Tab>', '>>', { desc = 'Indentar linha' })
