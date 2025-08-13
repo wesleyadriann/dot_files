@@ -1,5 +1,4 @@
 [terminal]
-shell= "/Users/wesley.adriann/.cargo/bin/zellij"
 
 [font]
 normal = { family = "CaskaydiaCove Nerd Font", style = "Regular" }
