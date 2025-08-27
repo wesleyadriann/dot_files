@@ -14,9 +14,7 @@ startup_mode = "Windowed" # "Maximized"
 
 [general]
 import = [
-  # "./tokyo-night-storm.toml"
-  # "./catppuccin-macchiato.toml"
-  "./catppuccin-mocha.toml"
+  "./github-dark.toml"
 ]
 
 [keyboard]

@@ -8,6 +8,17 @@ return {
       sources = {
         files = {
           hidden = true,
+          exclude = {
+            'node_modules',
+            'reports',
+          },
+        },
+        grep = {
+          hidden = true,
+          exclude = {
+            'node_modules',
+            'reports',
+          },
         },
         explorer = {
           -- auto_close = true,
@@ -23,7 +34,7 @@ return {
       },
       exclude = { -- adiciona nomes de pastas aqui pra excluir
         -- '.git',
-        'node_modules',
+        -- 'node_modules',
       },
     },
   },

@@ -31,6 +31,8 @@ vim.keymap.set('n', '<leader>h', '<C-w>h', { desc = 'Janela a Esquerda' })
 -- Control + . para abrir ações de código (correções rápidas)
 vim.keymap.set('n', '<A-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action (Correção Rápida)' })
 vim.keymap.set('v', '<A-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action (Correção Rápida)' })
+vim.keymap.set('n', '<C-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action (Correção Rápida)' })
+vim.keymap.set('v', '<C-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action (Correção Rápida)' })
 
 vim.keymap.set('n', '<S-Tab>', '<<', { desc = 'Desindentar linha' })
 vim.keymap.set('n', '<Tab>', '>>', { desc = 'Indentar linha' })
