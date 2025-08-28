@@ -14,7 +14,7 @@ startup_mode = "Windowed" # "Maximized"
 
 [general]
 import = [
-  "./github-dark.toml"
+  "./catppuccin-mocha.toml"
 ]
 
 [keyboard]
