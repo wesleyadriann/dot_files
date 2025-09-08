@@ -38,3 +38,6 @@ vim.keymap.set('n', '<S-Tab>', '<<', { desc = 'Desindentar linha' })
 vim.keymap.set('n', '<Tab>', '>>', { desc = 'Indentar linha' })
 
 vim.keymap.set('n', '<leader>bn', '<cmd>enew<CR>', { desc = 'Novo buffer vazio' })
+
+vim.keymap.set('n', 'x', '"_x')
+vim.keymap.set('v', 'x', '"_x')
