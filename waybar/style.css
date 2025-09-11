@@ -1,0 +1,33 @@
+@define-color foreground #cdd6f4;
+@define-color background #1a1b26;
+
+* {
+  background: @background;
+  color: @foreground;
+
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: CaskaydiaMono Nerd Font;
+  font-size: 14px;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+#tray,
+#cpu,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-system,
+#custom-expand-icon,
+#custom-power {
+  min-width: 12px;
+  margin: 0 12px;
+}

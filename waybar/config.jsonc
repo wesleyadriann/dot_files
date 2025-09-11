@@ -1,0 +1,101 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "group/tray-expander",
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "custom/system",
+    "custom/power"
+  ],
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "active": "󱓻",
+      "urgent": "󱓻"
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "clock": {
+    "format": "{:L%A | %H:%M | %d/%m}",
+  },
+  "network": {
+    "format": "{icon}",
+    "format-disconnected": "󰖪",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    "format-ethernet": "󰈀",
+    "format-linked": "{ifname} 󰈀",
+    "tooltip-format": "{ifname} via {gwaddr}",
+  },
+  "custom/system": {
+    "format": "",
+    "tooltip-fotmat": "System Settings",
+    "on-click": "systemsettings",
+  },
+  "bluetooth": {
+    "format": "",
+    "on-click": "alacritty --class=Bluetui -e bluetui",
+    "format-on": "󰂯",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲", // an empty format will hide the module
+    "format-connected": "󰂱{num_connections}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "on-click": "alacritty --class=Wiremix -e wiremix",
+    "tooltip-format": "Playing at {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "default": ["", "", ""]
+    }
+  },
+  "group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item"
+    },
+    "modules": ["custom/expand-icon", "tray"]
+  },
+  "custom/expand-icon": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": "Menu de energia",
+    "on-click": "~/.config/scripts/power_menu.sh"
+  },
+  "tray": {
+    "icon-size": 12,
+    "spacing": 12
+  }
+}
+
