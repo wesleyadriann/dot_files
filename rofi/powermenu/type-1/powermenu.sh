@@ -15,7 +15,7 @@ theme='style-3'
 
 # CMDs
 uptime="$(uptime -p | sed -e 's/up //g')"
-host=$(hostname)
+host=$(cat /etc/hostname)
 
 # Options
 shutdown=' Desligar'
@@ -29,7 +29,7 @@ no=' Não'
 # Rofi CMD
 rofi_cmd() {
   rofi -dmenu \
-    -p "$host" \
+    -p "$USER@$host" \
     -mesg "Uptime: $uptime" \
     -theme ${dir}/${theme}.rasi
 }
@@ -43,7 +43,7 @@ confirm_cmd() {
     -theme-str 'textbox {horizontal-align: 0.5;}' \
     -dmenu \
     -p 'Confirmation' \
-    -mesg 'Are you Sure?' \
+    -mesg 'Tem certeza?' \
     -theme ${dir}/${theme}.rasi
 }
 

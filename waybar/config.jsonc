@@ -102,13 +102,14 @@
   },
 
   "custom/expand-icon": {
-    "format": "",
+    "format": "",
     "tooltip": false
   },
 
   "custom/power": {
     "format": "",
-    "tooltip": "Menu de energia",
+    "tooltip": true,
+    "tooltip-format": "Menu de energia",
     "on-click": "~/.config/rofi/powermenu/type-1/powermenu.sh"
   },
 
