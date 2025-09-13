@@ -30,52 +30,68 @@
       "active": "󱓻",
       "urgent": "󱓻"
     },
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
+   "persistent-workspaces": { "*": 6 },
+  },
+
+  "clock": {
+    "format": "{:L%a %d/%m/%Y %H:%M}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%H:%M %d %B %Y}",
+      "on-click-right": "hyprctl dispatch exec '[float; size 500 270] alacritty -e peaclock'",
+      "calendar": {
+        "mode": "month",
+        "format": {
+          "months": "<b>{}</b>",
+          "days": "<span color='#acb0d0'><b>{}</b></span>",
+          "today": "<span color='#41a6b5'><b><u>{}</u></b></span>"
+		    }
     }
   },
-  "clock": {
-    "format": "{:L%A | %H:%M | %d/%m}",
-  },
+
   "network": {
     "format": "{icon}",
     "format-disconnected": "󰖪",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
-    "interval": 3,
+    "interval": 10,
     "spacing": 1,
     "format-ethernet": "󰈀",
     "format-linked": "{ifname} 󰈀",
     "tooltip-format": "{ifname} via {gwaddr}",
   },
+
   "custom/system": {
     "format": "",
     "tooltip-fotmat": "System Settings",
     "on-click": "systemsettings",
   },
+
   "bluetooth": {
     "format": "",
     "on-click": "alacritty --class=Bluetui -e bluetui",
     "format-on": "󰂯",
     "format-off": "󰂲",
-    "format-disabled": "󰂲", // an empty format will hide the module
+    "format-disabled": "󰂲",
     "format-connected": "󰂱{num_connections}",
     "tooltip-format-connected": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
   },
+
   "pulseaudio": {
     "format": "{volume}% {icon}",
     "on-click": "alacritty --class=Wiremix -e wiremix",
+    "scroll-step": 2,
     "tooltip-format": "Playing at {volume}%",
     "format-muted": "󰝟",
     "format-icons": {
-      "default": ["", "", ""]
+      "default": ["", "", ""],
+      "headphone": "",
+      "headset": "",
+      "headphone-muted": "󰟎",
+      "headset-muted": "󰟎",
     }
   },
+
   "group/tray-expander": {
     "orientation": "inherit",
     "drawer": {
@@ -84,15 +100,18 @@
     },
     "modules": ["custom/expand-icon", "tray"]
   },
+
   "custom/expand-icon": {
     "format": "",
     "tooltip": false
   },
+
   "custom/power": {
     "format": "",
     "tooltip": "Menu de energia",
-    "on-click": "~/.config/scripts/power_menu.sh"
+    "on-click": "~/.config/rofi/powermenu/type-1/powermenu.sh"
   },
+
   "tray": {
     "icon-size": 12,
     "spacing": 12
