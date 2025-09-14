@@ -36,7 +36,6 @@
   "clock": {
     "format": "{:L%a %d/%m/%Y %H:%M}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
-      "format-alt": "{:%H:%M %d %B %Y}",
       "on-click-right": "hyprctl dispatch exec '[float; size 500 270] alacritty -e peaclock'",
       "calendar": {
         "mode": "month",
@@ -60,15 +59,9 @@
     "tooltip-format": "{ifname} via {gwaddr}",
   },
 
-  "custom/system": {
-    "format": "",
-    "tooltip-fotmat": "System Settings",
-    "on-click": "systemsettings",
-  },
-
   "bluetooth": {
     "format": "",
-    "on-click": "alacritty --class=Bluetui -e bluetui",
+    "on-click": "hyprctl dispatch exec '[float; size 700 700] alacritty --class=Bluetui -e bluetui'",
     "format-on": "󰂯",
     "format-off": "󰂲",
     "format-disabled": "󰂲",
@@ -79,7 +72,7 @@
 
   "pulseaudio": {
     "format": "{volume}% {icon}",
-    "on-click": "alacritty --class=Wiremix -e wiremix",
+    "on-click": "hyprctl dispatch exec '[float; size 700 700] alacritty --class=Wiremix -e wiremix --tab output'",
     "scroll-step": 2,
     "tooltip-format": "Playing at {volume}%",
     "format-muted": "󰝟",
@@ -104,6 +97,13 @@
   "custom/expand-icon": {
     "format": "",
     "tooltip": false
+  },
+
+  "custom/system": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Configurações do sistema",
+    "on-click": "systemsettings",
   },
 
   "custom/power": {
