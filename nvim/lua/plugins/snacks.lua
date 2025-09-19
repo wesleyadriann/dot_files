@@ -20,16 +20,8 @@ return {
             'reports',
           },
         },
-        explorer = {
-          -- auto_close = true,
-          -- hidden = true,
-          layout = {
-            -- finder = 'explorer',
-            layout = {
-              -- preset = 'sidebar',
-              -- position = 'right',
-            },
-          },
+        projects = {
+          limit = 20,
         },
       },
       exclude = { -- adiciona nomes de pastas aqui pra excluir
