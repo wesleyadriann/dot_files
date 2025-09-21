@@ -4,11 +4,10 @@
 * {
   background: @background;
   color: @foreground;
-
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: CaskaydiaMono Nerd Font;
+  font-family: JetBrains Mono Nerd Font;
   font-size: 14px;
 }
 
@@ -19,6 +18,7 @@
 .modules-right {
   margin-right: 8px;
 }
+
 
 #tray,
 #cpu,
