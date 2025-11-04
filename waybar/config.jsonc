@@ -12,7 +12,8 @@
     "network",
     "pulseaudio",
     "custom/system",
-    "custom/power"
+    "custom/notification",
+    "custom/power",
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -24,23 +25,23 @@
       "3": "3",
       "4": "4",
       "active": "󱓻",
-      "urgent": "󱓻"
+      "urgent": "󱓻",
     },
-   "persistent-workspaces": { "*": 4 },
+    "persistent-workspaces": { "*": 4 },
   },
 
   "clock": {
     "format": "{:L%a %d/%m/%Y %H:%M}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
-      "on-click-right": "hyprctl dispatch exec '[float; size 500 270] alacritty --class=Peaclock -e peaclock'",
-      "calendar": {
-        "mode": "month",
-        "format": {
-          "months": "<b>{}</b>",
-          "days": "<span color='#acb0d0'><b>{}</b></span>",
-          "today": "<span color='#41a6b5'><b><u>{}</u></b></span>"
-		    }
-    }
+    "on-click-right": "hyprctl dispatch exec '[float; size 500 270] alacritty --class=Peaclock -e peaclock'",
+    "calendar": {
+      "mode": "month",
+      "format": {
+        "months": "<b>{}</b>",
+        "days": "<span color='#acb0d0'><b>{}</b></span>",
+        "today": "<span color='#41a6b5'><b><u>{}</u></b></span>",
+      },
+    },
   },
 
   "network": {
@@ -61,14 +62,15 @@
     "format-on": "󰂯",
     "format-off": "󰂲",
     "format-disabled": "󰂲",
-    "format-connected": "󰂱{num_connections}",
+    "format-connected": "󰂱 {num_connections}",
     "tooltip-format-connected": "{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
   },
 
   "pulseaudio": {
     "format": "{volume}% {icon}",
     "on-click": "hyprctl dispatch exec '[float; size 700 700] alacritty --class=Wiremix -e wiremix --tab output'",
+    "on-click-right": "uwsm app -- ~/.config/rofi/applets/bin/mpd.sh",
     "scroll-step": 2,
     "tooltip-format": "Playing at {volume}%",
     "format-muted": "󰝟",
@@ -78,21 +80,21 @@
       "headset": "",
       "headphone-muted": "󰟎",
       "headset-muted": "󰟎",
-    }
+    },
   },
 
   "group/tray-expander": {
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 600,
-      "children-class": "tray-group-item"
+      "children-class": "tray-group-item",
     },
-    "modules": ["custom/expand-icon", "tray"]
+    "modules": ["custom/expand-icon", "tray"],
   },
 
   "custom/expand-icon": {
     "format": "",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "custom/system": {
@@ -102,16 +104,22 @@
     "on-click": "systemsettings",
   },
 
+  "custom/notification": {
+    "format": "",
+    "tooltip": "Mostrar notificações",
+    "interval": 60,
+    "on-click": "~/.config/scripts/notify-center.sh",
+  },
+
   "custom/power": {
     "format": "",
     "tooltip": true,
     "tooltip-format": "Menu de energia",
-    "on-click": "~/.config/rofi/powermenu/type-1/powermenu.sh"
+    "on-click": "~/.config/rofi/powermenu/type-1/powermenu.sh",
   },
 
   "tray": {
     "icon-size": 12,
-    "spacing": 12
-  }
+    "spacing": 12,
+  },
 }
-

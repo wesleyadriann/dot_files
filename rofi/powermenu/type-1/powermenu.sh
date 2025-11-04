@@ -23,7 +23,7 @@ reboot=' Reiniciar'
 lock=' Bloquear'
 suspend=' Suspender'
 logout=' Deslogar'
-yes=' Sim'
+yes=' Sim'
 no=' Não'
 
 # Rofi CMD

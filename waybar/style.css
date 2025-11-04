@@ -19,7 +19,6 @@
   margin-right: 8px;
 }
 
-
 #tray,
 #cpu,
 #network,
@@ -27,6 +26,7 @@
 #pulseaudio,
 #custom-system,
 #custom-expand-icon,
+#custom-notification,
 #custom-power {
   min-width: 12px;
   margin: 0 12px;
