@@ -41,3 +41,5 @@ vim.keymap.set('n', '<leader>bn', '<cmd>enew<CR>', { desc = 'Novo buffer vazio' 
 
 vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set('v', 'x', '"_x')
+
+vim.keymap.set('n', '<leader>cz', ':LspRestart', { desc = 'Reiniciar lsp' })
