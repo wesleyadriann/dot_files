@@ -13,7 +13,7 @@ vim.opt.number = true -- Absolute line numbers
 -- vim.opt.colorcolumn = '80,120'
 
 vim.opt.spell = true
-vim.opt.spelllang = { 'pt_br', 'en' }
+vim.opt.spelllang = { 'pt_br', 'en_us', 'en', 'pt' }
 
 vim.cmd [[
   set conceallevel=0

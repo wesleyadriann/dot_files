@@ -26,6 +26,9 @@ vim.keymap.set('i', '<A-S-k>', '<Esc>:m .-2<CR>==gi', { desc = 'Mover linha para
 vim.keymap.set('v', '<A-S-Down>', ":m '>+1<CR>gv=gv", { desc = 'Mover seleção para baixo (Alt+Shift+Down)' })
 vim.keymap.set('v', '<A-S-Up>', ":m '<-2<CR>gv=gv", { desc = 'Mover seleção para cima (Alt+Shift+Up)' })
 
+vim.keymap.set('v', '<A-S-j>', ":m '>+1<CR>gv=gv", { desc = 'Mover seleção para baixo (Alt+Shift+Down)' })
+vim.keymap.set('v', '<A-S-k>', ":m '<-2<CR>gv=gv", { desc = 'Mover seleção para cima (Alt+Shift+Up)' })
+
 vim.keymap.set('n', '<leader>h', '<C-w>h', { desc = 'Janela a Esquerda' })
 
 -- Control + . para abrir ações de código (correções rápidas)
