@@ -30,56 +30,23 @@
     "persistent-workspaces": { "*": 4 },
   },
 
+  "hyprland/window": {
+    "format": "{title}",
+  },
+
   "clock": {
     "format": "{:L%a %d/%m/%Y %H:%M}",
-    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<span font='16'><tt><small>{calendar}</small></tt></span>",
     "on-click-right": "hyprctl dispatch exec '[float; size 500 270] alacritty --class=Peaclock -e peaclock'",
     "calendar": {
       "mode": "month",
+      "mode-mon-col": 1,
+      "on-scroll": 1,
       "format": {
         "months": "<b>{}</b>",
         "days": "<span color='#acb0d0'><b>{}</b></span>",
         "today": "<span color='#41a6b5'><b><u>{}</u></b></span>",
       },
-    },
-  },
-
-  "network": {
-    "format": "{icon}",
-    "format-disconnected": "󰖪",
-    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-disconnected": "Disconnected",
-    "interval": 10,
-    "spacing": 1,
-    "format-ethernet": "󰈀",
-    "format-linked": "{ifname} 󰈀",
-    "tooltip-format": "{ifname} via {gwaddr}",
-  },
-
-  "bluetooth": {
-    "format": "",
-    "on-click": "hyprctl dispatch exec '[float; size 700 700] alacritty --class=Bluetui -e bluetui'",
-    "format-on": "󰂯",
-    "format-off": "󰂲",
-    "format-disabled": "󰂲",
-    "format-connected": "󰂱 {num_connections}",
-    "tooltip-format-connected": "{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-  },
-
-  "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "on-click": "hyprctl dispatch exec '[float; size 700 700] alacritty --class=Wiremix -e wiremix --tab output'",
-    "on-click-right": "uwsm app -- ~/.config/rofi/applets/bin/mpd.sh",
-    "scroll-step": 2,
-    "tooltip-format": "Playing at {volume}%",
-    "format-muted": "󰝟",
-    "format-icons": {
-      "default": ["", "", ""],
-      "headphone": "",
-      "headset": "",
-      "headphone-muted": "󰟎",
-      "headset-muted": "󰟎",
     },
   },
 
@@ -95,6 +62,46 @@
   "custom/expand-icon": {
     "format": "",
     "tooltip": false,
+  },
+
+  "tray": {
+    "icon-size": 12,
+    "spacing": 12,
+  },
+
+  "bluetooth": {
+    "format": "",
+    "on-click": "hyprctl dispatch exec '[float; size 700 700] alacritty --class=Bluetui -e bluetui'",
+    "format-on": "󰂯",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+  },
+
+  "network": {
+    "format": "{icon}",
+    "format-disconnected": "󰖪",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 10,
+    "spacing": 1,
+    "format-ethernet": "󰈀",
+    "format-linked": "{ifname} 󰈀",
+    "tooltip-format": "{ifname} via {gwaddr}",
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "on-click": "hyprctl dispatch exec '[float; size 700 700] alacritty --class=Wiremix -e wiremix --tab output'",
+    "scroll-step": 2,
+    "tooltip-format": "Playing at {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "default": ["", ""],
+      "headphone": "",
+    },
   },
 
   "custom/system": {
@@ -113,13 +120,6 @@
 
   "custom/power": {
     "format": "",
-    "tooltip": true,
-    "tooltip-format": "Menu de energia",
     "on-click": "~/.config/rofi/powermenu/type-1/powermenu.sh",
-  },
-
-  "tray": {
-    "icon-size": 12,
-    "spacing": 12,
   },
 }
