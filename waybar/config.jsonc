@@ -3,14 +3,16 @@
   "layer": "top",
   "position": "top",
   "spacing": 0,
-  "height": 32,
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "height": 36,
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "group/tray-expander",
     "bluetooth",
     "network",
     "pulseaudio",
+    "custom/mouse-battery",
+    "cpu",
     "custom/system",
     "custom/notification",
     "custom/power",
@@ -19,13 +21,9 @@
     "on-click": "activate",
     "format": "{icon}",
     "format-icons": {
-      "default": "",
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "active": "󱓻",
-      "urgent": "󱓻",
+      "default": "",
+      "active": "󰄯",
+      "urgent": "󰀨",
     },
     "persistent-workspaces": { "*": 4 },
   },
@@ -35,7 +33,7 @@
   },
 
   "clock": {
-    "format": "{:L%a %d/%m/%Y %H:%M}",
+    "format": "{:L%H:%M | %a | %d/%m/%Y}",
     "tooltip-format": "<span font='16'><tt><small>{calendar}</small></tt></span>",
     "on-click-right": "hyprctl dispatch exec '[float; size 500 270] alacritty --class=Peaclock -e peaclock'",
     "calendar": {
@@ -102,6 +100,19 @@
       "default": ["", ""],
       "headphone": "",
     },
+  },
+
+  "custom/mouse-battery": {
+    "exec": "solaar show 2>/dev/null | grep -i 'battery' | tail -n1 | grep -o '[0-9]*%' | tr -d '%'",
+    "interval": 3600,
+    "format": "{}% 󰍽",
+    "tooltip": true,
+  },
+
+  "cpu": {
+    "interval": 120,
+    "format": "{usage}% ",
+    "max-length": 10,
   },
 
   "custom/system": {
