@@ -14,6 +14,9 @@ vim.keymap.set('n', '<A-S-Up>', ':m .-2<CR>==', { desc = 'Mover linha para cima 
 vim.keymap.set('n', '<A-S-j>', ':m .+1<CR>==', { desc = 'Mover linha para baixo (Alt+Shift+j)' })
 vim.keymap.set('n', '<A-S-k>', ':m .-2<CR>==', { desc = 'Mover linha para cima (Alt+Shift+k)' })
 
+vim.keymap.set('n', '<D-S-j>', ':m .+1<CR>==', { desc = 'Mover linha para baixo (Command+Shift+j)' })
+vim.keymap.set('n', '<D-S-k>', ':m .-2<CR>==', { desc = 'Mover linha para cima (Command+Shift+k)' })
+
 -- Insert mode
 vim.keymap.set('i', '<A-S-Down>', '<Esc>:m .+1<CR>==gi', { desc = 'Mover linha para baixo (Alt+Shift+Down)' })
 vim.keymap.set('i', '<A-S-Up>', '<Esc>:m .-2<CR>==gi', { desc = 'Mover linha para cima (Alt+Shift+Up)' })
@@ -21,12 +24,18 @@ vim.keymap.set('i', '<A-S-Up>', '<Esc>:m .-2<CR>==gi', { desc = 'Mover linha par
 vim.keymap.set('i', '<A-S-j>', '<Esc>:m .+1<CR>==gi', { desc = 'Mover linha para baixo (Alt+Shift+j)' })
 vim.keymap.set('i', '<A-S-k>', '<Esc>:m .-2<CR>==gi', { desc = 'Mover linha para cima (Alt+Shift+k)' })
 
+vim.keymap.set('i', '<D-S-j>', '<Esc>:m .+1<CR>==gi', { desc = 'Mover linha para baixo (Alt+Shift+j)' })
+vim.keymap.set('i', '<D-S-k>', '<Esc>:m .-2<CR>==gi', { desc = 'Mover linha para cima (Alt+Shift+k)' })
+
 -- Visual mode
 vim.keymap.set('v', '<A-S-Down>', ":m '>+1<CR>gv=gv", { desc = 'Mover seleção para baixo (Alt+Shift+Down)' })
 vim.keymap.set('v', '<A-S-Up>', ":m '<-2<CR>gv=gv", { desc = 'Mover seleção para cima (Alt+Shift+Up)' })
 
 vim.keymap.set('v', '<A-S-j>', ":m '>+1<CR>gv=gv", { desc = 'Mover seleção para baixo (Alt+Shift+j)' })
 vim.keymap.set('v', '<A-S-k>', ":m '<-2<CR>gv=gv", { desc = 'Mover seleção para cima (Alt+Shift+k)' })
+
+vim.keymap.set('v', '<D-S-j>', ":m '>+1<CR>gv=gv", { desc = 'Mover seleção para baixo (Alt+Shift+j)' })
+vim.keymap.set('v', '<D-S-k>', ":m '<-2<CR>gv=gv", { desc = 'Mover seleção para cima (Alt+Shift+k)' })
 
 -- Control + . para abrir ações de código (correções rápidas)
 vim.keymap.set({ 'n', 'v' }, '<A-.>', vim.lsp.buf.code_action, { desc = 'LSP Code Action (Correção Rápida)' })
