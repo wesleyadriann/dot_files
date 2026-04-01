@@ -80,12 +80,12 @@
 
   "network": {
     "format": "{icon}",
-    "format-disconnected": "󰖪",
+    "format-disconnected": "󰲛",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 10,
     "spacing": 1,
-    "format-ethernet": "󰈀",
+    "format-ethernet": "󰲝",
     "format-linked": "{ifname} 󰈀",
     "tooltip-format": "{ifname} via {gwaddr}",
   },

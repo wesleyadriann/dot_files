@@ -3,13 +3,20 @@ return {
   config = function()
     ---@type qmk.UserConfig
     local conf = {
-      name = 'LAYOUT',
+      -- name = 'LAYOUT',
+      -- layout = {
+      --   '_ x x x x x x _ _ _ x x x x x x',
+      --   '_ x x x x x x _ _ _ x x x x x x',
+      --   '_ x x x x x x _ _ _ x x x x x x',
+      --   '_ x x x x x x x _ x x x x x x x',
+      --   '_ _ x x x x x _ _ _ x x x x x _',
+      -- },
+      name = 'LAYOUT_split_3x6_3',
       layout = {
-        '_ x x x x x x _ _ _ x x x x x x',
-        '_ x x x x x x _ _ _ x x x x x x',
-        '_ x x x x x x _ _ _ x x x x x x',
-        '_ x x x x x x x _ x x x x x x x',
-        '_ _ x x x x x _ _ _ x x x x x _',
+        'x x x x x x _ _ x x x x x x',
+        'x x x x x x _ _ x x x x x x',
+        'x x x x x x _ _ x x x x x x',
+        '_ _ _ x x x _ _ x x x _ _ _',
       },
     }
     require('qmk').setup(conf)
