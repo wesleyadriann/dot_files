@@ -14,7 +14,7 @@ startup_mode = "Windowed" # "Maximized"
 
 [general]
 import = [
-  "./moonfly.toml"
+  "./tokyo-night-storm.toml"
 ]
 
 [keyboard]

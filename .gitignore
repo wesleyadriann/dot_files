@@ -1,13 +1,11 @@
 /*
 
 !.gitignore
-!starship.toml
 
 !/alacritty/
-!/zellij/
 !/nvim/
 !/lazygit/
 !/hypr/
 !/waybar/
-!/rofi/
-!/btop/
+!/starship/
+
